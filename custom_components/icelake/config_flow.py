@@ -70,7 +70,9 @@ class IcelakeConfigFlow(ConfigFlow, domain=DOMAIN):
             step_id="user",
             data_schema=vol.Schema(
                 {
-                    vol.Required(CONF_ENDPOINT): str,
+                    vol.Required(
+                        CONF_ENDPOINT, default="https://api.icelake.eu"
+                    ): str,
                     vol.Required(CONF_CLIENT_ID): str,
                     vol.Required(CONF_API_KEY): str,
                     vol.Optional(

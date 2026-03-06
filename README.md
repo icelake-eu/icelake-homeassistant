@@ -51,7 +51,7 @@
 
    | Field | Description |
    |---|---|
-   | **Icelake URL** | Base URL of your Icelake server (e.g. `https://icelake.example.com`) |
+   | **Icelake URL** | Base URL of your Icelake server (default: `https://api.icelake.eu`) |
    | **Client ID** | Client ID from the Icelake admin UI |
    | **API Key** | API key from the Icelake admin UI |
    | **Source identifier** | Name for this HA instance in Icelake (default: `homeassistant`) |
