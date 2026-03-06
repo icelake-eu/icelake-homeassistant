@@ -1,0 +1,46 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Icelake",
+        "description": "Enter the connection details for your Icelake server.",
+        "data": {
+          "endpoint": "Icelake URL",
+          "client_id": "Client ID",
+          "api_key": "API Key",
+          "source_id": "Source identifier",
+          "send_interval": "Send interval (seconds)"
+        },
+        "data_description": {
+          "endpoint": "The base URL of your Icelake server (e.g. https://icelake.example.com)",
+          "client_id": "The client ID from the Icelake admin UI",
+          "api_key": "The API key created in the Icelake admin UI",
+          "source_id": "Identifies this Home Assistant instance in Icelake",
+          "send_interval": "How often to send batched metrics (in seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to Icelake server",
+      "invalid_auth": "Invalid client ID or API key",
+      "unknown": "An unexpected error occurred"
+    },
+    "abort": {
+      "already_configured": "Icelake is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Icelake entity filter",
+        "description": "Configure which entities to send to Icelake. Leave empty to send all entities.",
+        "data": {
+          "include_domains": "Include domains",
+          "exclude_domains": "Exclude domains",
+          "include_entities": "Include entities",
+          "exclude_entities": "Exclude entities"
+        }
+      }
+    }
+  }
+}

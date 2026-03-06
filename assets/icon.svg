@@ -1,0 +1,21 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#57E5AE" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Hexagon outline -->
+  <polygon points="24,4 44,14 44,34 24,44 4,34 4,14" fill="none" stroke="url(#iconGrad)" stroke-width="2"/>
+  
+  <!-- Energy core -->
+  <polygon points="24,16 32,21 32,27 24,32 16,27 16,21" fill="#57E5AE" filter="url(#glow)"/>
+</svg>

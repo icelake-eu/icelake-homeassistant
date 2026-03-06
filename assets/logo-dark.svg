@@ -1,0 +1,21 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glowDark" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Icon -->
+  <polygon points="24,4 44,16 44,36 24,48 4,36 4,16" fill="none" stroke="#57E5AE" stroke-width="2"/>
+  <polygon points="24,16 32,20 32,28 24,32 16,28 16,20" fill="#57E5AE" filter="url(#glowDark)"/>
+
+  <!-- Text: Ice (white) -->
+  <text x="56" y="35" font-family="Outfit, system-ui, sans-serif" font-size="28" font-weight="600" fill="#FFFFFF">Ice</text>
+
+  <!-- Text: lake (mint) -->
+  <text x="97" y="35" font-family="Outfit, system-ui, sans-serif" font-size="28" font-weight="600" fill="#57E5AE">lake</text>
+</svg>

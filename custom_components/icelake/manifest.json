@@ -1,0 +1,10 @@
+{
+  "domain": "icelake",
+  "name": "Icelake",
+  "codeowners": [],
+  "config_flow": true,
+  "documentation": "https://github.com/your-org/icelake-homeassistant",
+  "iot_class": "cloud_push",
+  "requirements": ["python-snappy==0.7.3"],
+  "version": "0.1.0"
+}
