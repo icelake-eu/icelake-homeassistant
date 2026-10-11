@@ -23,6 +23,7 @@
 - **All entities by default** &mdash; every numeric sensor, switch, and binary sensor is sent automatically
 - **Configurable filtering** &mdash; include or exclude by domain or entity ID
 - **Efficient batching** &mdash; samples are buffered and sent in compressed batches on a configurable interval
+- **Resilient delivery** &mdash; if Icelake is temporarily unreachable, samples are kept in memory (up to 100k) and retried with exponential backoff
 - **Prometheus remote write** &mdash; uses the standard protocol, no translation layer needed
 - **Lightweight** &mdash; no extra containers, no sidecars, runs inside Home Assistant
 
