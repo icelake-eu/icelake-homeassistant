@@ -3,7 +3,7 @@
   "name": "Icelake",
   "codeowners": [],
   "config_flow": true,
-  "documentation": "https://github.com/your-org/icelake-homeassistant",
+  "documentation": "https://github.com/icelake-eu/icelake-homeassistant",
   "iot_class": "cloud_push",
   "requirements": ["python-snappy==0.7.3"],
   "version": "0.2.0"
