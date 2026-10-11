@@ -84,7 +84,7 @@ Home Assistant               Icelake
 1. The integration listens to `state_changed` events on the Home Assistant event bus
 2. Numeric states are sent as-is. Boolean states (`on`/`off`, `open`/`closed`, `home`/`not_home`, etc.) are mapped to `1.0`/`0.0`. Non-numeric states are skipped.
 3. Samples accumulate in a buffer. Every N seconds, the buffer is encoded as Prometheus protobuf, snappy-compressed, and sent to Icelake
-4. Each metric includes labels: `entity_id`, `domain`, `friendly_name`, `unit` (if available), and `device_class` (if available)
+4. Each metric includes labels: `entity_id`, `domain`, `friendly_name`, `unit` (if available), `device_class` (if available), and `state_class` (if available — `measurement` vs. the cumulative `total` / `total_increasing`)
 
 ### Metric naming
 

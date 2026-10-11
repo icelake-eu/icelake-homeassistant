@@ -94,6 +94,13 @@ async def async_setup_entry(hass: HomeAssistant, entry: IcelakeConfigEntry) -> b
         if device_class:
             labels.append(("device_class", device_class))
 
+        # measurement = instantaneous reading; total / total_increasing =
+        # cumulative meter. Icelake uses it to aggregate counters correctly
+        # (max - min per bucket instead of summing meter readings).
+        state_class = new_state.attributes.get("state_class")
+        if state_class:
+            labels.append(("state_class", state_class))
+
         sender.add_sample(labels, numeric_value, timestamp_ms)
 
     unsub = hass.bus.async_listen("state_changed", _handle_state_change)
